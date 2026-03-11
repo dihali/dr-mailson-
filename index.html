@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mailson Alves | Advogado Previdenciário — Uberlândia/MG e Brasil</title>
+    <meta name="description" content="Advogado previdenciário com 8 anos de experiência e mais de 800 clientes atendidos. INSS negou seu benefício? Consulta gratuita pelo WhatsApp.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #F9F7F2; color: #2D2D2D; scroll-behavior: smooth; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* HEADER */
+        .glass-header { background: rgba(249,247,242,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(46,125,82,0.12); }
+
+        /* BOTÕES */
+        .green-button { background: #2E7D52; color: white; padding: 14px 28px; border-radius: 9999px; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+        .green-button:hover { background: #3a9e68; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(46,125,82,0.25); }
+        .outline-green-button { border: 1.5px solid #2E7D52; color: #2E7D52; padding: 14px 28px; border-radius: 9999px; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; }
+        .outline-green-button:hover { background: #2E7D52; color: white; }
+        .wa-button { background: #25D366; color: white; padding: 14px 28px; border-radius: 9999px; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+        .wa-button:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(37,211,102,0.25); }
+
+        /* CARDS */
+        .card { background: white; padding: 32px; border-radius: 24px; border: 1px solid rgba(46,125,82,0.06); transition: all 0.5s; height: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: rgba(46,125,82,0.2); }
+
+        /* SCROLL REVEAL */
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+        .reveal-delay-6 { transition-delay: 0.6s; }
+
+        /* KEN BURNS */
+        .hero-img { animation: kenBurns 10s ease-out forwards; transform-origin: center top; }
+        @keyframes kenBurns {
+            0% { transform: scale(1.12); filter: brightness(0.35); }
+            100% { transform: scale(1); filter: brightness(0.45); }
+        }
+        .hero-content-anim { animation: fadeUp 1.4s ease-out 0.8s forwards; opacity: 0; }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* FAQ */
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-item.open .faq-answer { max-height: 300px; }
+        .faq-icon { transition: transform 0.3s; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-item.open { border-color: rgba(46,125,82,0.3) !important; }
+        .faq-item.open .faq-q { border-left-color: #2E7D52 !important; }
+
+        /* HAMBURGER */
+        .hamburger span { display: block; width: 26px; height: 2px; background: #2E7D52; border-radius: 2px; transition: all 0.3s; }
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+        /* WA FLOAT */
+        .wa-float { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+
+        /* SCROLLBAR */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center gap-3">
+                <img src="https://i.ibb.co/TBXkfYDF/image-Pippit-202603102212-removebg-preview-removebg-preview.png" class="h-12 w-auto" alt="Logo Dr. Mailson Alves">
+            </a>
+            <!-- Nav Desktop -->
+            <nav class="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <a href="#especialidades" class="hover:text-[#2E7D52] transition-colors text-[#2D2D2D]/60">Especialidades</a>
+                <a href="#sobre" class="hover:text-[#2E7D52] transition-colors text-[#2D2D2D]/60">Sobre</a>
+                <a href="#depoimentos" class="hover:text-[#2E7D52] transition-colors text-[#2D2D2D]/60">Depoimentos</a>
+                <a href="#faq" class="hover:text-[#2E7D52] transition-colors text-[#2D2D2D]/60">FAQ</a>
+                <a href="#contato" class="hover:text-[#2E7D52] transition-colors text-[#2D2D2D]/60">Contato</a>
+            </nav>
+            <a href="https://wa.me/5534998173384?text=Olá+Dr.+Mailson,+vim+pelo+site+e+quero+uma+consulta+gratuita." target="_blank" class="hidden md:flex green-button text-[10px] uppercase tracking-widest px-6 py-2 min-h-[48px]">Consulta Gratuita</a>
+            <!-- Hamburger -->
+            <div class="hamburger md:hidden flex flex-col gap-[5px] cursor-pointer p-2 z-[60]" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 z-50 hidden flex-col items-center justify-center gap-10 bg-[#F9F7F2]" id="mobileMenu">
+        <a href="#especialidades" onclick="closeMenu()" class="font-serif text-3xl text-[#2D2D2D] hover:text-[#2E7D52] transition-colors">Especialidades</a>
+        <a href="#sobre" onclick="closeMenu()" class="font-serif text-3xl text-[#2D2D2D] hover:text-[#2E7D52] transition-colors">Sobre</a>
+        <a href="#depoimentos" onclick="closeMenu()" class="font-serif text-3xl text-[#2D2D2D] hover:text-[#2E7D52] transition-colors">Depoimentos</a>
+        <a href="#faq" onclick="closeMenu()" class="font-serif text-3xl text-[#2D2D2D] hover:text-[#2E7D52] transition-colors">FAQ</a>
+        <a href="https://wa.me/5534998173384" target="_blank" onclick="closeMenu()" class="wa-button text-lg px-10 min-h-[48px]">📲 WhatsApp</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20">
+        <div class="absolute inset-0">
+            <img src="https://i.ibb.co/q3pR4tzR/Design-sem-nome-6.png" class="hero-img w-full h-full object-cover object-top" alt="Dr. Mailson Alves">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-6 max-w-4xl hero-content-anim">
+            <p class="text-[#4CAF78] tracking-[0.4em] uppercase text-xs md:text-sm mb-6 font-semibold border border-[#4CAF78]/40 inline-block px-5 py-2 rounded-full">⚖️ Advogado Previdenciário · OAB/MG 199.679 · Brasil</p>
+            <h1 class="text-4xl md:text-7xl font-serif mb-6 leading-tight">Dr. Mailson Alves</h1>
+            <p class="text-xl md:text-3xl font-serif italic text-[#4CAF78] mb-6 leading-tight max-w-2xl mx-auto">"O INSS negou seu benefício. Isso não significa que você não tem direito."</p>
+            <p class="text-base md:text-lg mb-10 text-white/80 font-light">8 anos de experiência · +800 clientes atendidos · Atendimento online em todo o Brasil</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="https://wa.me/5534998173384?text=Olá+Dr.+Mailson,+vim+pelo+site+e+quero+uma+consulta+gratuita." target="_blank" class="wa-button text-lg px-10 min-h-[48px]">📲 Consultar meu caso agora</a>
+                <a href="#especialidades" class="outline-green-button border-white text-white hover:bg-white hover:text-[#2E7D52] text-lg px-10 min-h-[48px]">Conhecer Especialidades</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mt-10 text-white/60 text-xs font-medium">
+                <span>⭐⭐⭐⭐⭐ Atendimento humanizado</span>
+                <span>· +800 benefícios conquistados</span>
+                <span>· 🇧🇷 Brasil todo</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center reveal reveal-delay-1">
+                <div class="text-3xl md:text-5xl font-serif font-bold text-[#2D2D2D] mb-2" data-target="800">0</div>
+                <div class="text-[10px] uppercase tracking-widest text-[#2D2D2D]/50 font-bold">Clientes Atendidos</div>
+            </div>
+            <div class="text-center reveal reveal-delay-2">
+                <div class="text-3xl md:text-5xl font-serif font-bold text-[#2D2D2D] mb-2">8 Anos</div>
+                <div class="text-[10px] uppercase tracking-widest text-[#2D2D2D]/50 font-bold">De Experiência</div>
+            </div>
+            <div class="text-center reveal reveal-delay-3">
+                <div class="text-3xl md:text-5xl font-serif font-bold text-[#2D2D2D] mb-2">Online</div>
+                <div class="text-[10px] uppercase tracking-widest text-[#2D2D2D]/50 font-bold">Todo o Brasil</div>
+            </div>
+            <div class="text-center reveal reveal-delay-4">
+                <div class="text-3xl md:text-5xl font-serif font-bold text-[#2D2D2D] mb-2">OAB/MG</div>
+                <div class="text-[10px] uppercase tracking-widest text-[#2D2D2D]/50 font-bold">199.679 Ativo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section id="especialidades" class="py-20 md:py-32 px-6 bg-[#F9F7F2]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-[#2E7D52] uppercase tracking-[0.3em] text-xs mb-4 font-bold">⚖️ Especialidades</p>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#2D2D2D] mb-4">O INSS negou não é o fim.<br>É o começo da luta.</h2>
+                <p class="text-[#2D2D2D]/60 max-w-xl mx-auto text-sm leading-relaxed">Conheça os benefícios que você tem direito e que o INSS muitas vezes nega sem justificativa válida.</p>
+                <div class="h-px bg-[#2E7D52] w-16 mx-auto mt-8"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="card reveal reveal-delay-1">
+                    <div class="w-14 h-14 bg-[#F9F7F2] rounded-full flex items-center justify-center mb-5 text-2xl">🏥</div>
+                    <h3 class="text-xl font-serif mb-3 text-[#2D2D2D]">Auxílio por Incapacidade</h3>
+                    <p class="text-sm text-[#2D2D2D]/60 leading-relaxed mb-5">Ficou doente ou se machucou e não consegue trabalhar? Mesmo que o INSS negue na perícia, existe recurso. Não desista na primeira negativa — ela pode ser revertida.</p>
+                    <a href="https://wa.me/5534998173384?text=Quero+saber+sobre+auxílio+por+incapacidade." target="_blank" class="text-[#2E7D52] text-xs font-bold uppercase tracking-widest hover:gap-3 flex items-center gap-2 transition-all">Quero entender meu caso →</a>
+                </div>
+                <div class="card reveal reveal-delay-2">
+                    <div class="w-14 h-14 bg-[#F9F7F2] rounded-full flex items-center justify-center mb-5 text-2xl">👴</div>
+                    <h3 class="text-xl font-serif mb-3 text-[#2D2D2D]">Aposentadoria por Tempo de Contribuição</h3>
+                    <p class="text-sm text-[#2D2D2D]/60 leading-relaxed mb-5">Com uma análise correta do seu CNIS, é possível recuperar períodos não computados e aumentar significativamente o valor do seu benefício.</p>
+                    <a href="https://wa.me/5534998173384?text=Quero+saber+sobre+minha+aposentadoria." target="_blank" class="text-[#2E7D52] text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all hover:gap-3">Quero entender meu caso →</a>
+                </div>
+                <div class="card reveal reveal-delay-3">
+                    <div class="w-14 h-14 bg-[#F9F7F2] rounded-full flex items-center justify-center mb-5 text-2xl">♿</div>
+                    <h3 class="text-xl font-serif mb-3 text-[#2D2D2D]">BPC / LOAS</h3>
+                    <p class="text-sm text-[#2D2D2D]/60 leading-relaxed mb-5">Pessoas com deficiência ou idosos em situação de vulnerabilidade têm direito ao BPC — mesmo sem nunca ter contribuído para o INSS. O INSS costuma negar, mas com a documentação certa é possível conquistar.</p>
+                    <a href="https://wa.me/5534998173384?text=Quero+saber+sobre+BPC/LOAS." target="_blank" class="text-[#2E7D52] text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all hover:gap-3">Quero entender meu caso →</a>
+                </div>
+                <div class="card reveal reveal-delay-4">
+                    <div class="w-14 h-14 bg-[#F9F7F2] rounded-full flex items-center justify-center mb-5 text-2xl">👨‍👩‍👧</div>
+                    <h3 class="text-xl font-serif mb-3 text-[#2D2D2D]">Pensão por Morte e Benefícios de Família</h3>
+                    <p class="text-sm text-[#2D2D2D]/60 leading-relaxed mb-5">Perdeu um familiar que era segurado do INSS? A pensão por morte é um direito dos dependentes. Salário-maternidade e auxílio-reclusão também costumam ser negados indevidamente.</p>
+                    <a href="https://wa.me/5534998173384?text=Quero+saber+sobre+pensão+por+morte." target="_blank" class="text-[#2E7D52] text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all hover:gap-3">Quero entender meu caso →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="py-20 md:py-32 px-6 bg-white">
+        <div class="max-w-3xl mx-auto text-center reveal">
+            <p class="text-[#2E7D52] uppercase tracking-[0.3em] text-xs mb-4 font-bold">Quem é o Dr. Mailson Alves</p>
+            <h2 class="text-3xl md:text-5xl font-serif mb-10 text-[#2D2D2D] leading-tight">Conhecimento técnico com atendimento humanizado.</h2>
+            <div class="space-y-6 text-[#2D2D2D]/70 text-lg leading-relaxed">
+                <p>Com <strong class="text-[#2D2D2D]">8 anos de experiência</strong> em Direito Previdenciário e mais de <strong class="text-[#2D2D2D]">800 clientes atendidos</strong>, o Dr. Mailson Alves construiu sua carreira na crença de que cada pessoa merece atenção individualizada e uma luta dedicada pelos seus direitos.</p>
+                <p>Bacharel em Direito pela Universidade Pitágoras, com pós-graduação em Gestão de Pessoas, o Dr. Mailson alia conhecimento técnico à sensibilidade humana — entendendo que por trás de cada processo existe uma família que precisa de uma resposta.</p>
+                <p class="font-serif italic text-xl text-[#2D2D2D] border-l-4 border-[#2E7D52] pl-6 text-left">"Atendimento humanizado não é diferencial — é obrigação. Cada cliente traz uma história, uma necessidade real. É isso que me move todos os dias."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER DIFERENCIAL -->
+    <section class="relative py-32 px-6 overflow-hidden flex items-center justify-center min-h-[60vh]">
+        <div class="absolute inset-0">
+            <img src="https://i.ibb.co/q3pR4tzR/Design-sem-nome-6.png" class="w-full h-full object-cover" alt="Dr. Mailson">
+            <div class="absolute inset-0 bg-black/65 backdrop-blur-[1px]"></div>
+        </div>
+        <div class="relative z-10 text-center text-white max-w-4xl reveal">
+            <div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20 text-3xl">⚖️</div>
+            <p class="text-[#4CAF78] uppercase tracking-widest text-xs mb-4 font-bold">Por que nos escolher</p>
+            <h2 class="text-3xl md:text-5xl font-serif mb-8">Atendimento que resolve.<br>Do início ao fim.</h2>
+            <p class="text-lg text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">Mais do que um advogado, você terá um parceiro dedicado a conquistar o que é seu por direito — com dedicação, transparência e resultado.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-5 py-2 bg-white/10 backdrop-blur-md rounded-full text-[10px] uppercase font-bold text-[#4CAF78] border border-white/10">Atendimento Humanizado</span>
+                <span class="px-5 py-2 bg-white/10 backdrop-blur-md rounded-full text-[10px] uppercase font-bold text-[#4CAF78] border border-white/10">100% Online</span>
+                <span class="px-5 py-2 bg-white/10 backdrop-blur-md rounded-full text-[10px] uppercase font-bold text-[#4CAF78] border border-white/10">Conhecimento Técnico</span>
+                <span class="px-5 py-2 bg-white/10 backdrop-blur-md rounded-full text-[10px] uppercase font-bold text-[#4CAF78] border border-white/10">Resultado Comprovado</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="py-20 md:py-32 px-6 bg-[#F9F7F2]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-[#2E7D52] uppercase tracking-[0.3em] text-xs mb-4 font-bold">Depoimentos</p>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#2D2D2D]">O que dizem os clientes do Dr. Mailson</h2>
+                <div class="h-px bg-[#2E7D52] w-16 mx-auto mt-8"></div>
+            </div>
+            <div class="flex md:grid md:grid-cols-3 gap-8 overflow-x-auto pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0" id="depSlider">
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white p-10 rounded-2xl shadow-sm border border-black/5 flex flex-col reveal reveal-delay-1">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex text-[#2E7D52] gap-1">★★★★★</div>
+                        <span class="text-[10px] bg-emerald-50 text-emerald-600 px-2 py-1 rounded font-bold uppercase tracking-wider">Verificada</span>
+                    </div>
+                    <p class="italic mb-8 text-[#2D2D2D]/70 leading-relaxed flex-grow">"O INSS negou meu auxílio duas vezes. O Dr. Mailson entrou com recurso e consegui o benefício em poucos meses. Atendimento excelente e humano."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#F9F7F2] flex items-center justify-center text-[#2E7D52] font-serif font-bold">A</div>
+                        <p class="font-serif font-bold text-lg text-[#2D2D2D]">Ana R.</p>
+                    </div>
+                </div>
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white p-10 rounded-2xl shadow-sm border border-black/5 flex flex-col reveal reveal-delay-2">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex text-[#2E7D52] gap-1">★★★★★</div>
+                        <span class="text-[10px] bg-emerald-50 text-emerald-600 px-2 py-1 rounded font-bold uppercase tracking-wider">Verificado</span>
+                    </div>
+                    <p class="italic mb-8 text-[#2D2D2D]/70 leading-relaxed flex-grow">"Consegui minha aposentadoria com um valor muito maior do que o INSS queria me pagar. O Dr. Mailson encontrou períodos que eu nem sabia que contavam."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#F9F7F2] flex items-center justify-center text-[#2E7D52] font-serif font-bold">J</div>
+                        <p class="font-serif font-bold text-lg text-[#2D2D2D]">José C.</p>
+                    </div>
+                </div>
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white p-10 rounded-2xl shadow-sm border border-black/5 flex flex-col reveal reveal-delay-3">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex text-[#2E7D52] gap-1">★★★★★</div>
+                        <span class="text-[10px] bg-emerald-50 text-emerald-600 px-2 py-1 rounded font-bold uppercase tracking-wider">Verificada</span>
+                    </div>
+                    <p class="italic mb-8 text-[#2D2D2D]/70 leading-relaxed flex-grow">"Atendimento pelo WhatsApp foi incrível. Tudo resolvido online, sem precisar sair de casa. Recomendo de olhos fechados para quem tem problema com o INSS."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#F9F7F2] flex items-center justify-center text-[#2E7D52] font-serif font-bold">M</div>
+                        <p class="font-serif font-bold text-lg text-[#2D2D2D]">Maria F.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Dots mobile -->
+            <div class="flex justify-center gap-2 mt-6 md:hidden" id="dotsContainer">
+                <span class="w-2 h-2 rounded-full bg-[#2E7D52]"></span>
+                <span class="w-2 h-2 rounded-full bg-[#2E7D52]/30"></span>
+                <span class="w-2 h-2 rounded-full bg-[#2E7D52]/30"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 md:py-32 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <p class="text-[#2E7D52] uppercase tracking-[0.3em] text-xs mb-4 font-bold">❓ Dúvidas Frequentes</p>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#2D2D2D]">Perguntas que todo mundo tem sobre o INSS</h2>
+                <div class="h-px bg-[#2E7D52] w-16 mx-auto mt-8"></div>
+            </div>
+            <div class="space-y-3 reveal">
+                <div class="faq-item border border-black/8 rounded-2xl overflow-hidden">
+                    <div class="faq-q flex justify-between items-center p-6 cursor-pointer border-l-4 border-transparent transition-all">
+                        <span class="font-semibold text-[#2D2D2D] text-sm pr-4">O INSS negou meu benefício. Ainda tenho chance?</span>
+                        <span class="faq-icon text-[#2E7D52] text-2xl font-light flex-shrink-0">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-[#2D2D2D]/60 text-sm leading-relaxed">Sim! A negativa do INSS não é definitiva. Você pode entrar com recurso administrativo ou ação judicial. Em muitos casos a negativa é revertida com documentação correta e um advogado especialista.</div>
+                </div>
+                <div class="faq-item border border-black/8 rounded-2xl overflow-hidden">
+                    <div class="faq-q flex justify-between items-center p-6 cursor-pointer border-l-4 border-transparent transition-all">
+                        <span class="font-semibold text-[#2D2D2D] text-sm pr-4">Quanto tempo demora para conseguir o benefício?</span>
+                        <span class="faq-icon text-[#2E7D52] text-2xl font-light flex-shrink-0">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-[#2D2D2D]/60 text-sm leading-relaxed">Depende do caminho — administrativo ou judicial. Pelo INSS o prazo legal é 45 dias. Via judicial pode variar de meses a anos. O importante é não deixar o tempo passar sem agir.</div>
+                </div>
+                <div class="faq-item border border-black/8 rounded-2xl overflow-hidden">
+                    <div class="faq-q flex justify-between items-center p-6 cursor-pointer border-l-4 border-transparent transition-all">
+                        <span class="font-semibold text-[#2D2D2D] text-sm pr-4">Preciso me deslocar até Uberlândia para ser atendido?</span>
+                        <span class="faq-icon text-[#2E7D52] text-2xl font-light flex-shrink-0">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-[#2D2D2D]/60 text-sm leading-relaxed">Não! O atendimento é 100% online pelo WhatsApp, videochamada e e-mail. Atendemos clientes em todo o Brasil sem que precisem sair de casa.</div>
+                </div>
+                <div class="faq-item border border-black/8 rounded-2xl overflow-hidden">
+                    <div class="faq-q flex justify-between items-center p-6 cursor-pointer border-l-4 border-transparent transition-all">
+                        <span class="font-semibold text-[#2D2D2D] text-sm pr-4">Quanto custa contratar um advogado previdenciário?</span>
+                        <span class="faq-icon text-[#2E7D52] text-2xl font-light flex-shrink-0">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-[#2D2D2D]/60 text-sm leading-relaxed">A consulta inicial é gratuita. Em muitas situações trabalhamos com êxito — você só paga se ganhar. Entre em contato para uma análise gratuita do seu caso.</div>
+                </div>
+                <div class="faq-item border border-black/8 rounded-2xl overflow-hidden">
+                    <div class="faq-q flex justify-between items-center p-6 cursor-pointer border-l-4 border-transparent transition-all">
+                        <span class="font-semibold text-[#2D2D2D] text-sm pr-4">Trabalhei na roça sem carteira assinada. Tenho direito?</span>
+                        <span class="faq-icon text-[#2E7D52] text-2xl font-light flex-shrink-0">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-[#2D2D2D]/60 text-sm leading-relaxed">Sim! O trabalhador rural tem direitos previdenciários especiais. Mesmo sem contribuição formal, é possível comprovar o trabalho com notas fiscais de venda de produto, declarações sindicais e outros documentos alternativos.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-20 px-6 bg-[#F9F7F2]">
+        <div class="max-w-5xl mx-auto bg-[#2D2D2D] rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row shadow-2xl reveal">
+            <div class="md:w-1/2 p-12 md:p-20 text-white flex flex-col justify-center">
+                <h2 class="text-3xl md:text-5xl font-serif mb-6 leading-tight">Não desista do que é seu.</h2>
+                <p class="text-white/70 mb-10 text-lg leading-relaxed">O INSS negou. Mas a última palavra ainda não foi dita. Consulta gratuita e sem compromisso.</p>
+                <a href="https://wa.me/5534998173384?text=Olá+Dr.+Mailson,+vim+pelo+site+e+quero+uma+consulta+gratuita." target="_blank" class="wa-button w-full text-lg py-5 min-h-[48px] justify-center">📲 Consulta gratuita agora</a>
+                <p class="text-white/40 text-[10px] mt-6 uppercase tracking-widest text-center">Atendimento online em todo o Brasil.</p>
+            </div>
+            <div class="md:w-1/2 min-h-[400px]">
+                <img src="https://i.ibb.co/q3pR4tzR/Design-sem-nome-6.png" class="w-full h-full object-cover object-top" alt="Dr. Mailson Alves">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="bg-[#F9F7F2] pt-24 pb-12 px-6 border-t border-black/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <div class="mb-6">
+                    <img src="https://i.ibb.co/TBXkfYDF/image-Pippit-202603102212-removebg-preview-removebg-preview.png" class="h-14 w-auto" alt="Logo Dr. Mailson Alves">
+                </div>
+                <p class="text-[#2D2D2D]/60 max-w-sm leading-relaxed mb-6 text-sm">Especialista em Direito Previdenciário com 8 anos de experiência. Atendimento humanizado para quem precisa lutar pelos seus direitos.</p>
+                <a href="https://instagram.com/mailson.advocacia" target="_blank" class="text-[#2E7D52] text-sm font-semibold hover:underline">📷 @mailson.advocacia</a>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-6 text-[#2D2D2D]">Links Rápidos</h4>
+                <ul class="space-y-3 text-[#2D2D2D]/60 text-sm">
+                    <li><a href="#especialidades" class="hover:text-[#2E7D52] transition-colors">Especialidades</a></li>
+                    <li><a href="#sobre" class="hover:text-[#2E7D52] transition-colors">Sobre o Dr. Mailson</a></li>
+                    <li><a href="#depoimentos" class="hover:text-[#2E7D52] transition-colors">Depoimentos</a></li>
+                    <li><a href="#faq" class="hover:text-[#2E7D52] transition-colors">FAQ</a></li>
+                    <li><a href="https://wa.me/5534998173384" target="_blank" class="hover:text-[#2E7D52] transition-colors">(34) 99817-3384</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-6 text-[#2D2D2D]">Contato</h4>
+                <ul class="space-y-3 text-[#2D2D2D]/60 text-sm">
+                    <li class="flex items-start gap-2"><span class="text-[#2E7D52]">📍</span> Travessa Cristo Rei, 50<br>Uberlândia — MG</li>
+                    <li class="flex items-center gap-2"><span class="text-[#2E7D52]">📱</span> (34) 99817-3384</li>
+                    <li class="flex items-center gap-2"><span class="text-[#2E7D52]">💻</span> Atendimento online Brasil todo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-black/40 uppercase tracking-widest text-center md:text-left">
+            <p>© 2026 Dr. Mailson Alves — Advocacia Previdenciária. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <strong style="color:#2E7D52">DI-HALI DIGITAL</strong></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5534998173384?text=Olá+Dr.+Mailson,+vim+pelo+site+e+quero+uma+consulta+gratuita." target="_blank" class="wa-float fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl z-50">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Contador
+        function animateCounter(el, target) {
+            let current = 0;
+            const step = Math.ceil(target / 60);
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = '+' + current.toLocaleString('pt-BR');
+            }, 30);
+        }
+        const counterObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting && e.target.dataset.target) {
+                    animateCounter(e.target, parseInt(e.target.dataset.target));
+                    counterObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+        // FAQ
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        // Menu Mobile
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            document.body.style.overflow = !mobileMenu.classList.contains('hidden') ? 'hidden' : '';
+        });
+        function closeMenu() {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Dots depoimentos
+        const slider = document.getElementById('depSlider');
+        const dots = document.querySelectorAll('#dotsContainer span');
+        if (slider && dots.length) {
+            slider.addEventListener('scroll', () => {
+                const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+                dots.forEach((d, i) => {
+                    d.style.backgroundColor = i === index ? '#2E7D52' : 'rgba(46,125,82,0.3)';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
